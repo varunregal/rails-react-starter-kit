@@ -6,6 +6,7 @@ import reactSvg from "/assets/react.svg";
 import viteRubySvg from "/assets/vite_ruby.svg";
 
 import cs from "./InertiaExample.module.css";
+import { Button } from "../components/ui/button";
 
 export default function InertiaExample({ name }: { name: string }) {
   const [count, setCount] = useState(0);
@@ -40,12 +41,9 @@ export default function InertiaExample({ name }: { name: string }) {
         <h2 className={cs.h2}>Inertia + Vite Ruby + React</h2>
 
         <div className="card">
-          <button
-            className={cs.button}
-            onClick={() => setCount((count) => count + 1)}
-          >
+          <Button onClick={() => setCount((count) => count + 1)}>
             count is {count}
-          </button>
+          </Button>
           <p>
             Edit <code>app/frontend/pages/InertiaExample.jsx</code> and save to
             test HMR
