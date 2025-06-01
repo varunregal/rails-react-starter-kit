@@ -46,4 +46,4 @@ node_modules
 /blob-report/
 /playwright/.cache/
 
-CLAUDE.md
+CLAUDE.mdpackage-lock.json
