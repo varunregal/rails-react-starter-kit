@@ -1,4 +1,4 @@
-import { Head, usePage } from '@inertiajs/react';
+import { Head } from '@inertiajs/react';
 import { useState } from 'react';
 
 import inertiaSvg from '../assets/inertia.svg';
@@ -10,7 +10,6 @@ import { Button } from '../components/ui/button';
 
 export default function InertiaExample({ name }: { name: string }) {
   const [count, setCount] = useState(0);
-  console.log(usePage().props);
   return (
     <>
       <Head title="Inertia + Vite Ruby + React Example" />

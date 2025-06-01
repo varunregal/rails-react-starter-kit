@@ -1,10 +1,11 @@
+import React from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Link, router, usePage } from '@inertiajs/react';
+import { router, usePage } from '@inertiajs/react';
 import { signupFormSchema, signupFormSchemaType } from '@/lib/schema';
 import {
   Select,
