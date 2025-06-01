@@ -15,25 +15,12 @@ export function LoginForm() {
     resolver: zodResolver(loginFormSchema),
   });
   const { errors: pageErrors } = usePage().props;
-  const token = document
-    .querySelector('meta[name="csrf-token"]')
-    ?.getAttribute('content');
+
   const onSubmit = async (values: any) => {
-    router.post(
-      '/session',
-      {
-        email_address: values.email,
-        password: values.password,
-        authenticity_token: token,
-      },
-      {
-        preserveState: true,
-        preserveScroll: true,
-        onError: (errors) => {
-          console.warn('Authentication failed: ', errors);
-        },
-      }
-    );
+    router.post('/session', {
+      email_address: values.email,
+      password: values.password,
+    });
   };
 
   return (

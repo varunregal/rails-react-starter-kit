@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/Navbar';
 import React from 'react';
 
 interface LayoutProps {
@@ -5,5 +6,10 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  return <>{children}</>;
+  return (
+    <div className="h-screen">
+      <Navbar />
+      {children}
+    </div>
+  );
 }

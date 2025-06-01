@@ -10,9 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_01_022114) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_01_053036) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "user_category", ["pre-health", "graduate"]
+  create_enum "user_role", ["admin", "mentor", "mentee"]
 
   create_table "sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -28,6 +33,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_01_022114) do
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
+    t.enum "role", default: "mentee", null: false, enum_type: "user_role"
+    t.enum "category", default: "pre-health", null: false, enum_type: "user_category"
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
