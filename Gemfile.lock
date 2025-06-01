@@ -418,6 +418,7 @@ DEPENDENCIES
   rails (~> 8.0.2)
   rspec-rails (~> 8.0.0)
   rubocop (~> 1.75, >= 1.75.8)
+  rubocop-performance
   rubocop-rails (~> 2.32)
   rubocop-rails-omakase
   rubocop-rspec (~> 3.6)
