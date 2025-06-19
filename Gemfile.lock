@@ -81,7 +81,7 @@ GEM
     bcrypt_pbkdf (1.1.1-arm64-darwin)
     bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.1)
-    bigdecimal (3.2.1)
+    bigdecimal (3.2.2)
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
@@ -130,7 +130,7 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    inertia_rails (3.8.0)
+    inertia_rails (3.9.0)
       railties (>= 6)
     io-console (0.8.0)
     irb (1.15.2)
@@ -222,7 +222,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
-    rack (3.1.15)
+    rack (3.1.16)
     rack-proxy (0.7.7)
       rack
     rack-session (2.1.1)
@@ -263,7 +263,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.0)
-    rdoc (6.14.0)
+    rdoc (6.14.1)
       erb
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
@@ -411,7 +411,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails (~> 6.4, >= 6.4.4)
   faker (~> 3.5, >= 3.5.1)
-  inertia_rails (~> 3.8)
+  inertia_rails (~> 3.9)
   jbuilder
   kamal
   pg (~> 1.1)
